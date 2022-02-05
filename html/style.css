@@ -1,0 +1,178 @@
+body {
+    width: calc(100% - 2vh);
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    user-select: none;
+    position: relative;
+    flex-direction: column;
+    top: 3vh;
+    right: 2vh;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: bold;
+    src: url(fonts/PFDinDisplayPro-Bold.ttf);
+}
+
+@font-face {
+    font-family: text;
+    src: url(fonts/PFDinDisplayPro-Regular.ttf);
+}
+
+
+.notification {
+    width: 30vh;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top-left-radius: .5vh;
+    border-top-right-radius: .5vh;
+    margin-block-end: 1vh;
+    margin-right: -50vh;
+}
+
+.notification.info {
+    background: linear-gradient(270deg, rgba(0,0,0,0.7) 0%, rgba(35, 130, 208, 0.5) 100%);
+}
+
+.notification.success {
+    background: linear-gradient(270deg, rgba(0,0,0,0.7) 0%, rgba(116,185,110,0.5) 100%);
+}
+
+.notification.warning {
+    background: linear-gradient(270deg, rgba(0,0,0,0.7) 0%, rgba(228, 175, 0, 0.5) 100%);
+}
+
+.notification.error {
+    background: linear-gradient(270deg, rgba(0,0,0,0.7) 0%, rgba(128, 28, 28, 0.502) 100%);
+}
+
+
+.progbar {
+    width: 100%;
+    height: 3%;
+    display: flex;
+}
+
+.p-line {
+    /* width: 75%; */
+    height: 100%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s ease;
+    animation: progressbar-countdown;
+    /* animation-duration: 10s; */
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes progressbar-countdown {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+  }
+
+.notif {
+    width: 100%;
+    height: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.n-icon {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.n-text {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.n-title {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.n-title > span {
+    color: rgb(191, 191, 191);
+    font-size: 1.25vh;
+    font-family: text;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.n-texts {
+    width: 98.5%;
+    height: fit-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.n-texts > span {
+    color: #fff;
+    font-size: 1.5vh;
+    font-family: bold;
+    word-break: break-all;
+}
+
+#icon {
+    color: #fff;
+    font-size: 2.25vh;
+}
+
+.p-line.info {
+    background-color: rgba(0, 142, 250, 0.55);
+}
+
+.p-line.success {
+    background-color: rgba(25, 211, 0, 0.55);
+}
+
+.p-line.error {
+    background-color: rgba(255, 0, 0, 0.55);
+}
+
+.p-line.warning {
+    background-color: rgba(255, 217, 0, 0.55);
+}
+
+.progbar.info {
+    background-color: rgba(0, 68, 124, 0.35);
+}
+
+.progbar.success {
+    background-color: rgba(1, 133, 56, 0.35);
+}
+
+.progbar.error {
+    background-color: rgba(121, 1, 1, 0.35);
+}
+
+.progbar.warning {
+    background-color: rgba(175, 184, 0, 0.35);
+}
