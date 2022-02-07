@@ -1,12 +1,3 @@
-ESX = nil
-
-Citizen.CreateThread(function()
-	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Citizen.Wait(0)
-	end
-end)
-
 RegisterNetEvent('wais:sendNotif')
 AddEventHandler('wais:sendNotif', function(type, title, message, duration)
     if not (type == "info" or type == "warning" or type == "error" or type == "success") then return end
